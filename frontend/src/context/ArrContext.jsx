@@ -12,6 +12,8 @@ const StoreContext = (props)=>{
 
     const [isSearch,setIsSearch] = useState(false);
     const[job,setJob] = useState([]);
+    const [showLogin,setShowLogin]= useState(false);
+
 
     const fetchJobs = async()=>{
         setJob(jobsData);
@@ -25,6 +27,7 @@ const StoreContext = (props)=>{
         setSearch,search,
         setIsSearch,isSearch,
         setJob,job,
+        showLogin,setShowLogin,
     }
     return (<div>
         <NameContext.Provider value={userData}>
